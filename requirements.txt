@@ -1,5 +1,37 @@
-pandas>=1.3.0
-streamlit>=1.10.0
-joblib>=1.1.0
-scikit-learn>=1.0.0
-numpy>=1.21.0
+# Dependências do Projeto Airbnb Rio - Previsão de Preços
+# =========================================================
+
+# Framework Web
+streamlit>=1.28.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# Manipulação de Dados
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualização
+plotly>=5.15.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Análise Estatística
+scipy>=1.10.0
+
+# Utilitários
+pathlib2>=2.3.7  # Para compatibilidade com versões antigas do Python
+
+# Desenvolvimento (opcional)
+pytest>=7.4.0  # Para testes
+black>=23.0.0   # Para formatação de código
+flake8>=6.0.0   # Para linting
+
+# Jupyter (opcional - para notebooks)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Outras dependências úteis
+python-dotenv>=1.0.0  # Para variáveis de ambiente
+tqdm>=4.65.0          # Para barras de progresso

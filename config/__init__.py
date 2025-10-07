@@ -1,0 +1,1 @@
+# Arquivo para tornar config um módulo Python
