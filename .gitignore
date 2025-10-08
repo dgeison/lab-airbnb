@@ -145,12 +145,32 @@ cython_debug/
 # Streamlit
 .streamlit/
 
-# Model files (uncomment if you don't want to commit models)
-# *.joblib
-# *.pkl
-# *.h5
-# *.model
+# =============================================================================
+# ARQUIVOS GRANDES (>100MB) - BLOQUEADOS PARA GITHUB
+# =============================================================================
 
-# Data files (large datasets)
-*.csv
-!primeiros_registros.csv  # Keep small sample files
+# Model files - SEMPRE ignorar (muito grandes)
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.model
+*.pt
+*.pth
+
+# Data files - CSV grandes bloqueados
+data/raw/*.csv
+data/processed/dados.csv
+
+# Manter apenas amostras pequenas
+!data/processed/primeiros_registros.csv
+!**/sample_*.csv
+
+# =============================================================================
+# OUTROS ARQUIVOS TEMPORÁRIOS
+# =============================================================================
+# Logs e outputs
+*.log
+outputs/
+temp/
+cache/
