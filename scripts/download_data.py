@@ -21,8 +21,8 @@ logger = logging.getLogger(__name__)
 
 # URLs dos dados (exemplo - ajustar conforme necessário)
 DATA_URLS = {
-    "abril2018.csv": "http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2018-04-03/data/listings.csv.gz",
-    "maio2018.csv": "http://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2018-05-02/data/listings.csv.gz",
+    "abril2018.csv": "https://www.kaggle.com/code/allanbruno/helping-regular-people-price-listings-on-airbnb/input?select=abril2018.csv",
+    "maio2018.csv": "https://www.kaggle.com/code/allanbruno/helping-regular-people-price-listings-on-airbnb/input?select=maio2018.csv",
     # Adicionar mais URLs conforme necessário
 }
 
