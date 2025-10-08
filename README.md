@@ -1,168 +1,226 @@
-# 🏠 Projeto Airbnb Rio - Predição de Preços
+# 🏠 Airbnb Rio - Predição de Preços
 
-Este projeto utiliza Machine Learning para prever preços de imóveis do Airbnb no Rio de Janeiro.
+[![Python](https://img.shields.io/badge/Python-3.13-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 📋 Descrição
+> Sistema de predição de preços para imóveis Airbnb no Rio de Janeiro usando Machine Learning
 
-O projeto analisa dados históricos do Airbnb do Rio de Janeiro e cria um modelo de predição de preços baseado em características dos imóveis como localização, tipo de propriedade, número de quartos, amenidades, entre outros fatores.
+![Airbnb Rio](https://img.shields.io/badge/Dataset-600K%2B%20propriedades-brightgreen)
+![Accuracy](https://img.shields.io/badge/R²%20Score-77%25-success)
 
-## 🔧 Estrutura do projeto
+## � Índice
 
-```
-📦 airbnb-price-prediction/
-├── 🧠 1_analise_e_treinamento.ipynb     # Análise de dados e treinamento do modelo
-├── 🎯 2_aplicacao_web.py               # Aplicação web principal (Streamlit) 
-├── ⚙️ configuracoes.py                 # Configurações e estruturas de dados
-├── 📓 configuracoes.ipynb              # Notebook de configurações (documentado)
-├── 📊 dataset/                         # Dados históricos do Airbnb (25 arquivos)
-├── 🤖 modelo.joblib                    # Modelo treinado (será gerado)
-├── 📖 README.md                        # Esta documentação
-└── 📋 Guias auxiliares/
-    ├── EXPLICACAO_SIMPLES.md           # Guia super simples do projeto
-    ├── ONDE_MODELO_USADO.md            # Explicação visual do uso do modelo
-    └── PROPOSTA_NOVOS_NOMES.md         # Histórico da renomeação
-```Rio - Predição de Preços
+- [🎯 Sobre o Projeto](#-sobre-o-projeto)
+- [✨ Funcionalidades](#-funcionalidades)
+- [🛠️ Tecnologias](#️-tecnologias)
+- [� Instalação](#-instalação)
+- [� Como Usar](#-como-usar)
+- [📊 Modelo](#-modelo)
+- [📁 Estrutura do Projeto](#-estrutura-do-projeto)
 
-Este projeto utiliza Machine Learning para prever preços de imóveis do Airbnb no Rio de Janeiro.
+## 🎯 Sobre o Projeto
 
-## 📋 Descrição
+Este projeto utiliza **Machine Learning** para prever preços de imóveis Airbnb no Rio de Janeiro. A aplicação analisa mais de **600.000 propriedades** e oferece predições precisas baseadas em características como localização, tipo de propriedade, amenidades e políticas.
 
-O projeto analisa dados históricos do Airbnb do Rio de Janeiro e cria um modelo de predição de preços baseado em características dos imóveis como localização, tipo de propriedade, número de quartos, amenidades, entre outros fatores.
+### 🎯 Objetivos
 
-## 🔧 Estrutura do projeto
+- **Predição Precisa**: R² Score > 77%
+- **Interface Intuitiva**: Aplicação web responsiva
+- **Análise Completa**: Pipeline end-to-end de Data Science
+- **Deploy Pronto**: Configurado para produção
 
-```
-├── DeployProjetoAirbnb.py      # 🎯 APLICAÇÃO PRINCIPAL (Streamlit)
-├── config_airbnb.py           # ⚙️ Configurações e estruturas de dados
-├── config_airbnb.ipynb        # 📓 Notebook de configurações  
-├── Solução Airbnb Rio.ipynb   # 🧠 Análise exploratória e modelagem
-├── dataset/                   # 📊 Dados históricos do Airbnb (25 arquivos)
-├── modelo.joblib              # 🤖 Modelo treinado (será gerado)
-├── LIMPEZA_ARQUIVOS.md        # � Log de limpeza e organização
-└── README.md                  # 📖 Esta documentação
-```
+## ✨ Funcionalidades
 
-## 🚀 Como executar
+### 🔮 Predição de Preços
+- Estimativa de preços por noite
+- Projeções semanal, mensal e anual
+- Categorização automática (Econômico, Moderado, Premium, Luxo)
+
+### 🏡 Configuração Detalhada
+- **Localização**: Coordenadas GPS precisas
+- **Propriedade**: Quartos, banheiros, capacidade, amenidades
+- **Tipo**: Apartamento, casa, condomínio, loft, etc.
+- **Políticas**: Cancelamento, reserva instantânea, superhost
+
+### 📊 Interface Web
+- Design responsivo e moderno
+- Validação de dados em tempo real
+- Visualizações interativas
+- Dicas de localização para o Rio
+
+## 🛠️ Tecnologias
+
+### Core
+- **Python 3.13** - Linguagem principal
+- **Streamlit** - Interface web
+- **Scikit-learn** - Machine Learning
+- **Pandas** - Manipulação de dados
+- **NumPy** - Computação numérica
+
+### Visualização
+- **Plotly** - Gráficos interativos
+- **Matplotlib** - Visualizações estáticas
+- **Seaborn** - Análise estatística
+
+### ML Pipeline
+- **RandomForest** - Algoritmo principal
+- **Joblib** - Serialização do modelo
+- **Feature Engineering** - 39 variáveis otimizadas
+
+## � Instalação
 
 ### Pré-requisitos
-
-- Python 3.7 ou superior
-- pip (gerenciador de pacotes do Python)
+- Python 3.13+
+- Git
+- 4GB+ RAM (para treinamento)
 
 ### Instalação
 
-1. Clone este repositório:
+### 1. Clone o Repositório
 ```bash
-git clone https://github.com/SEU_USUARIO/airbnb-rio-prediction.git
-cd airbnb-rio-prediction
+git clone https://github.com/dgeison/lab-airbnb.git
+cd lab-airbnb
 ```
 
-2. Instale as dependências:
+### 2. Crie um Ambiente Virtual
 ```bash
-pip install pandas streamlit joblib scikit-learn numpy seaborn matplotlib plotly
+python -m venv .pyenv
+.pyenv\Scripts\activate  # Windows
+# ou
+source .pyenv/bin/activate  # Linux/Mac
 ```
 
-3. **IMPORTANTE**: Treine o modelo primeiro:
+### 3. Instale as Dependências
 ```bash
-# Execute o notebook completo para gerar modelo.joblib
-jupyter notebook "1_analise_e_treinamento.ipynb"
+pip install -r requirements.txt
 ```
 
-4. Execute a aplicação Streamlit:
+### 4. Verifique a Instalação
 ```bash
-streamlit run 2_aplicacao_web.py
+python train_model.py --check
 ```
 
-## 📊 Dados
+## 🚀 Como Usar
 
-O projeto utiliza dados do Airbnb do Rio de Janeiro coletados entre 2018 e 2020, incluindo:
-
-- **25 arquivos** de dados históricos mensais
-- **Localização** (latitude, longitude)  
-- **Características** do imóvel (quartos, banheiros, camas)
-- **Tipo** de propriedade e quarto
-- **Política** de cancelamento
-- **Amenidades** disponíveis
-- **Informações** do host
-
-## 🛠️ Tecnologias utilizadas
-
-- **Python** - Linguagem de programação principal
-- **Pandas** - Manipulação e análise de dados
-- **Scikit-learn** - Machine Learning (ExtraTreesRegressor)
-- **Streamlit** - Interface web interativa
-- **Joblib** - Serialização do modelo
-- **Seaborn/Matplotlib** - Visualizações
-- **Plotly** - Mapas interativos
-
-## 📈 Funcionalidades
-
-- ✅ Interface web intuitiva para inserção de dados
-- ✅ Predição em tempo real do preço sugerido
-- ✅ Validação de entrada de dados
-- ✅ Visualização organizada em seções
-- ✅ Tratamento de erros quando modelo não existe
-- ✅ Estruturas de dados bem documentadas
-
-## 🔧 Arquivos principais
-
-### 🧠 `1_analise_e_treinamento.ipynb` (⭐ TREINAMENTO)
-- **Notebook principal** com análise completa dos dados históricos
-- Limpeza e tratamento de 900+ mil registros do Airbnb
-- Treinamento e avaliação de modelos de Machine Learning
-- **Gera o arquivo `modelo.joblib` (ESSENCIAL para aplicação funcionar)**
-- **Resultado**: Modelo com 97.5% de precisão (R² score)
-
-### 🎯 `2_aplicacao_web.py` (⭐ APLICAÇÃO)
-- **Aplicação principal** em Streamlit para usuários finais
-- Interface web moderna e completa para predições de preços
-- Layout organizado em seções com validações de entrada
-- Tratamento robusto de erros e feedback visual
-- **Execute com**: `streamlit run 2_aplicacao_web.py`
-
-### ⚙️ `configuracoes.py` 
-- **Configurações centralizadas** de todo o projeto
-- Estruturas de dados bem documentadas e validadas
-- Funções auxiliares para manipulação dos dados
-- Pode ser importado por outros módulos ou executado independentemente
-- **Execute com**: `python configuracoes.py`
-
-### 📓 `configuracoes.ipynb`
-- **Versão interativa** das configurações com documentação detalhada
-- Define e explica todas as estruturas de dados do projeto
-- Exemplos práticos e demonstrações de uso
-- Ideal para entender o projeto e fazer modificações
-
-## 📝 Como usar a aplicação
-
-1. **Execute**: `streamlit run 2_aplicacao_web.py`
-2. **Abra** o navegador no endereço indicado (geralmente http://localhost:8501)
-3. **Preencha** os dados do imóvel:
-   - 📍 Localização (latitude/longitude)
-   - 🏡 Características (quartos, banheiros, camas)
-   - 📂 Tipo de propriedade e quarto
-   - ⚙️ Políticas e amenidades
-4. **Clique** em "🔮 Prever Valor do Imóvel"
-5. **Visualize** o preço predito em reais!
-
-## ⚠️ Resolução de problemas
-
-### Modelo não encontrado
+### Aplicação Web Principal
 ```bash
-❌ Arquivo 'modelo.joblib' não encontrado!
+streamlit run app.py
 ```
-**Solução**: Execute completamente o notebook `1_analise_e_treinamento.ipynb`
+Acesse: http://localhost:8501
 
-### Dependências não instaladas
+### Aplicação MVC (Avançada)
 ```bash
-ModuleNotFoundError: No module named 'streamlit'
+streamlit run app_mvc.py
 ```
-**Solução**: `pip install streamlit pandas joblib scikit-learn`
 
-### Erro ao executar aplicação
+### Treinamento do Modelo
 ```bash
-FileNotFoundError: [Errno 2] No such file or directory: '2_aplicacao_web.py'
+python train_model.py
 ```
+
+### Exemplo de Uso Programático
+```python
+import joblib
+import pandas as pd
+
+# Carregar modelo
+modelo = joblib.load('modelo.joblib')
+
+# Dados de exemplo
+dados = {
+    'latitude': -22.9068,
+    'longitude': -43.1729,
+    'accommodates': 2,
+    'bedrooms': 1,
+    'bathrooms': 1.0,
+    # ... outras 34 features
+}
+
+# Predição
+preco = modelo.predict(pd.DataFrame([dados]))[0]
+print(f"Preço estimado: R$ {preco:.2f}")
+```
+
+## � Modelo
+
+### Algoritmo: RandomForest Regressor
+- **N° Estimadores**: 50 árvores
+- **Max Depth**: 15 níveis
+- **Features**: 39 variáveis engineered
+- **Compressão**: Joblib level 3
+
+### Performance
+- **R² Score**: 77.11%
+- **RMSE**: R$ 136.80
+- **Tamanho**: 20.4 MB
+- **Tempo Predição**: <100ms
+
+### Features Principais
+1. **Localização**: `latitude`, `longitude`
+2. **Capacidade**: `accommodates`, `bedrooms`, `bathrooms`
+3. **Amenidades**: `n_amenities`, `guests_efficiency`
+4. **Temporais**: `ano`, `mes`
+5. **Categóricas**: Tipo propriedade, quarto, políticas
+
+## � Estrutura do Projeto
+
+```
+lab-airbnb/
+├── 📱 app.py                    # Aplicação web principal
+├── 🏗️ app_mvc.py               # Aplicação MVC avançada
+├── 🤖 train_model.py           # Script de treinamento
+├── 📊 modelo.joblib            # Modelo treinado
+├── 📈 dados.csv               # Dataset processado
+├── 📋 requirements.txt        # Dependências
+├── 📖 README.md              # Documentação
+├── 📁 notebooks/             # Análises Jupyter
+│   └── analise_e_treinamento.ipynb
+├── 📁 data/                  # Dados brutos e processados
+│   ├── raw/                  # Dados originais
+│   └── processed/            # Dados limpos
+├── 📁 src/                   # Código fonte MVC
+│   ├── controllers/          # Lógica de negócio
+│   ├── models/              # Modelos ML
+│   └── views/               # Componentes UI
+├── � config/               # Configurações
+├── 📁 utils/                # Utilitários
+└── 📁 scripts/              # Scripts auxiliares
+```
+
+## � Análises
+
+### Dataset
+- **Período**: 2018-2020
+- **Registros**: 608.794 propriedades
+- **Features**: 39 após feature engineering
+- **Qualidade**: 98%+ dos dados válidos
+
+### Insights de Negócio
+- �️ **Copacabana/Ipanema**: Preços 40% acima da média
+- 🏠 **Casas inteiras**: Premium de 25% vs quartos privados
+- ⭐ **Superhosts**: Preços 15% superiores
+- 🎯 **Amenidades**: Cada 10 amenidades = +R$ 50/noite
+
+---
+
+## 📞 Contato
+
+**Desenvolvido por**: [Dgeison](https://github.com/dgeison)  
+**Projeto**: [lab-airbnb](https://github.com/dgeison/lab-airbnb)  
+**Data**: Outubro 2024
+
+---
+
+<div align="center">
+
+### 🌟 Se este projeto foi útil, considere dar uma ⭐!
+
+[![GitHub stars](https://img.shields.io/github/stars/dgeison/lab-airbnb.svg?style=social&label=Star)](https://github.com/dgeison/lab-airbnb)
+[![GitHub forks](https://img.shields.io/github/forks/dgeison/lab-airbnb.svg?style=social&label=Fork)](https://github.com/dgeison/lab-airbnb/fork)
+
+</div>
 **Solução**: Certifique-se de estar na pasta correta do projeto
 
 ## 🔍 Métricas do modelo
